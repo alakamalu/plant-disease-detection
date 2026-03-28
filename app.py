@@ -5,7 +5,8 @@ from tensorflow.keras.preprocessing import image
 import os
 import gdown
 
-MODEL_URL = "https://drive.google.com/uc?id=123l4LVyt2jIC5Vx9sFgtlHZvLx_5viX6"
+# ✅ Updated model URL
+MODEL_URL = "https://drive.google.com/uc?id=1ImIJf5wxl-BGPygU3fsziao8t_Oo6Gi_"
 MODEL_PATH = "plant_disease_model.h5"
 
 # Download model if not exists
@@ -44,10 +45,12 @@ def predict():
         filepath = os.path.join("static", file.filename)
         file.save(filepath)
 
+        # Preprocess image
         img = image.load_img(filepath, target_size=(224,224))
         img_array = image.img_to_array(img)
         img_array = np.expand_dims(img_array, axis=0) / 255.0
 
+        # Prediction
         predictions = model.predict(img_array)
         class_idx = np.argmax(predictions)
         confidence = np.max(predictions)
