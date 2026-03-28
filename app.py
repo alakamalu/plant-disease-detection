@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 # Load model safely
 try:
-    model = tf.keras.models.load_model(MODEL_PATH)
+    model = tf.keras.models.load_model(MODEL_PATH, compile=False)
     print("Model loaded successfully")
 except Exception as e:
     print("Error loading model:", e)
