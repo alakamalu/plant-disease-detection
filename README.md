@@ -71,7 +71,29 @@ Example output:
 
 ## 📂 Project Structure
 
-
+Plant-Disease-Detection/
+│
+├── dataset/
+│   └── sample_images/
+│       ├── potato_late_blight.jfif
+│       ├── tomato_early_blight.jfif
+│       └── tomato_healthy.jfif
+│
+├── notebook/
+│   └── Plant_Disease_Detection.ipynb
+│
+├── outputs/
+│   ├── accuracy_curve.png
+│   └── sample_predictions.png
+│
+├── screenshots/
+│   ├── dataset structure.PNG
+│   ├── prediction output.PNG
+│   └── training result.PNG
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
 
 ## ⚙️ Technologies Used
 
