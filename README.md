@@ -1,61 +1,64 @@
 # 🌿 Plant Disease Detection — End-to-End Deep Learning Project
 
-This project is a complete end-to-end Deep Learning application that detects plant diseases from leaf images.
+This project presents a deep learning approach for detecting plant diseases from leaf images using a Convolutional Neural Network (CNN).
 
-The system takes a plant leaf image as input, processes it using a trained Convolutional Neural Network (CNN), and provides:
-
-- Predicted disease class
-- Confidence score (probability)
-- Real-time results via web interface
-
-The model is deployed as an interactive web application.
+The model classifies plant leaf images into disease categories and predicts the corresponding class with a confidence score.
 
 
 ## 🚀 Project Highlights
 
-- Real-world agricultural problem (crop health monitoring)
-- Deep Learning-based image classification
-- CNN model trained on plant disease dataset
-- Image preprocessing and normalization
-- Interactive web interface using Flask
-- Upload-based prediction system
-- Fast and real-time inference
-- Cloud deployment ready
-
+- Real-world agricultural image classification problem
+- Custom CNN model developed using TensorFlow/Keras
+- Dataset containing 6,500 leaf images across 5 classes
+- Image preprocessing, normalization, batching, and augmentation
+- Achieved 92%+ validation accuracy
+- End-to-end workflow covering preprocessing, training, evaluation, and inference
+  
 
 ## 🧠 Deep Learning Workflow
 
-- Dataset collection (plant leaf images)
-- Image preprocessing (resizing, normalization)
-- Train-validation split
-- CNN model building using TensorFlow/Keras
+- Dataset loading and exploration
+- Image preprocessing and normalization
+- Training-validation split (80:20)
+- CNN architecture development
 - Model training and evaluation
-- Accuracy and loss monitoring
-- Saving trained model (.keras)
-- Integration with Flask web app
-- Deployment on cloud platform (Render)
+- Accuracy and loss visualization
+- Prediction pipeline for unseen images
+- Model serialization for future deployment
 
 
 ## 🤖 Model Used
 
-Convolutional Neural Network (CNN) was used because:
+Convolutional Neural Network (CNN) :
 
-- Effective for image classification tasks
-- Automatically extracts spatial features
-- High accuracy on image datasets
-- Scalable and robust
+- Convolution Layers
+- Max Pooling Layers
+- Dense Layers
+- Dropout Regularization
+- Softmax Output Layer
+
+CNN was selected because it efficiently learns spatial patterns and performs well in image classification tasks.
 
 
 ## 📥 Input
 
-The web application accepts:
+Plant leaf image
 
-- Plant leaf image (uploaded by user)
+
+## 📊 Dataset Information
+
+| Metric            | Value     |
+| ----------------- | --------- |
+| Total Images      | 6500      |
+| Classes           | 5         |
+| Training Images   | 5200      |
+| Validation Images | 1300      |
+| Image Size        | 224 × 224 |
 
 
 ## 📈 Output Provided
 
-The system predicts:
+The model predicts:
 
 - Disease name (class label)
 - Confidence score (prediction probability)
@@ -63,17 +66,7 @@ The system predicts:
 Example output:
 
 - Prediction: Tomato Leaf Blight  
-- Confidence: 92%
-
-
-## 🖥️ Web Application
-
-The trained model is integrated into a Flask web app that:
-
-- Accepts image upload
-- Preprocesses the image
-- Runs prediction using trained model
-- Displays result in user-friendly UI
+- Confidence: 91.8%
 
 
 ## 📂 Project Structure
@@ -83,16 +76,11 @@ The trained model is integrated into a Flask web app that:
 ## ⚙️ Technologies Used
 
 - Python
-- TensorFlow / Keras
+- TensorFlow
+- Keras
 - NumPy
-- Flask
-- HTML / CSS
-- Gunicorn
-
-
-## 🌐 Deployment
-
-Deployed using Render (cloud platform).
+- Matplotlib
+- Jupyter Notebook
 
 
 ## 🎯 Business Value
@@ -107,4 +95,4 @@ Plant disease detection helps:
 
 ## 👨‍💻 Author
 
-Deep Learning project built for real-world image classification and deployment practice.
+Deep Learning project developed to explore practical applications of computer vision in agriculture.
